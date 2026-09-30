@@ -5,37 +5,37 @@ export default function SnakeBackground() {
     <div className="snake-background" aria-hidden="true">
 
       <img
-        src="/images/cobra 1.png"
+        src={`${import.meta.env.BASE_URL}images/cobra1.png`}
         alt=""
         className="snake snake-1"
       />
 
       <img
-        src="/images/cobra2.png"
+        src={`${import.meta.env.BASE_URL}images/cobra2.png`}
         alt=""
         className="snake snake-2"
       />
 
       <img
-        src="/images/cobra3.png"
+        src={`${import.meta.env.BASE_URL}images/cobra3.png`}
         alt=""
         className="snake snake-3"
       />
 
       <img
-        src="/images/cobra4.png"
+        src={`${import.meta.env.BASE_URL}images/cobra4.png`}
         alt=""
         className="snake snake-4"
       />
 
       <img
-        src="/images/cobra2.png"
+        src={`${import.meta.env.BASE_URL}images/cobra2.png`}
         alt=""
         className="snake snake-5"
       />
 
       <img
-        src="/images/cobra4.png"
+        src={`${import.meta.env.BASE_URL}images/cobra4.png`}
         alt=""
         className="snake snake-6"
       />
