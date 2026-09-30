@@ -1,0 +1,565 @@
+.catalogo {
+position: relative;
+z-index: 1;
+width: min(1180px, 92%);
+margin: 0 auto;
+padding: 70px 0 100px;
+}
+
+/* =========================================================
+CABEÇALHO
+========================================================= */
+
+.page-header {
+text-align: center;
+padding: 30px 0 70px;
+}
+
+.page-header > span {
+display: block;
+margin-bottom: 16px;
+color: var(--dourado);
+font-size: 0.8rem;
+font-weight: 700;
+letter-spacing: 0.18em;
+}
+
+.page-header h1 {
+margin-bottom: 18px;
+color: var(--branco);
+font-size: clamp(3rem, 7vw, 5rem);
+line-height: 0.95;
+}
+
+.page-header h1 strong {
+color: var(--dourado);
+}
+
+.page-header p {
+width: min(650px, 100%);
+margin: 0 auto;
+color: var(--texto-claro);
+font-size: 1rem;
+line-height: 1.8;
+}
+
+/* =========================================================
+TÍTULOS DAS SEÇÕES
+========================================================= */
+
+.section-heading {
+margin-bottom: 30px;
+}
+
+.section-heading > span {
+display: block;
+margin-bottom: 10px;
+color: var(--dourado);
+font-size: 0.75rem;
+font-weight: 700;
+letter-spacing: 0.15em;
+}
+
+.section-heading h2 {
+color: var(--branco);
+font-size: clamp(2rem, 4vw, 3rem);
+line-height: 1;
+}
+
+.section-heading h2 strong {
+color: var(--dourado);
+}
+
+/* =========================================================
+SEÇÕES DE CATÁLOGO
+========================================================= */
+
+.catalog-section,
+.methods-section,
+.important,
+.fidelity,
+.indication-section {
+margin-bottom: 55px;
+padding: 40px;
+background: var(--fundo-card);
+border: 1px solid var(--borda-dourada);
+border-radius: var(--radius);
+box-shadow: var(--sombra);
+backdrop-filter: blur(10px);
+}
+
+.section-description {
+max-width: 850px;
+margin-bottom: 30px;
+color: var(--texto-claro);
+line-height: 1.8;
+}
+
+/* =========================================================
+PREÇOS
+========================================================= */
+
+.prices {
+display: grid;
+grid-template-columns: repeat(4, 1fr);
+gap: 15px;
+}
+
+.price-card {
+min-height: 100px;
+display: flex;
+flex-direction: column;
+justify-content: center;
+gap: 8px;
+padding: 20px;
+background: rgba(22, 9, 34, 0.65);
+border: 1px solid rgba(212, 175, 55, 0.28);
+border-radius: 16px;
+transition:
+transform var(--transition),
+border-color var(--transition),
+background var(--transition);
+}
+
+.price-card:hover {
+transform: translateY(-4px);
+background: rgba(155, 109, 204, 0.18);
+border-color: var(--dourado);
+}
+
+.price-card span {
+color: var(--texto-claro);
+font-size: 0.9rem;
+}
+
+.price-card strong {
+color: var(--dourado-claro);
+font-size: 1.3rem;
+}
+
+/* =========================================================
+MÉTODOS
+========================================================= */
+
+.methods-section {
+padding: 45px 40px;
+}
+
+.method-price-highlight {
+display: inline-flex;
+align-items: center;
+gap: 14px;
+margin-bottom: 35px;
+padding: 12px 20px;
+background: var(--roxo-escuro);
+border: 1px solid var(--dourado);
+border-radius: 999px;
+}
+
+.method-price-highlight span {
+color: var(--branco);
+font-size: 0.85rem;
+}
+
+.method-price-highlight strong {
+color: var(--dourado-claro);
+}
+
+.combo-section {
+margin-bottom: 40px;
+}
+
+.combo-section h3 {
+margin-bottom: 18px;
+color: var(--dourado-claro);
+font-size: 1.5rem;
+}
+
+.method-grid {
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+gap: 16px;
+}
+
+.method-card {
+overflow: hidden;
+background: rgba(22, 9, 34, 0.72);
+border: 1px solid rgba(212, 175, 55, 0.28);
+border-radius: 16px;
+transition:
+border-color var(--transition),
+background var(--transition);
+}
+
+.method-card.open {
+border-color: var(--dourado);
+background: rgba(155, 109, 204, 0.12);
+}
+
+.method-header {
+width: 100%;
+display: flex;
+align-items: center;
+justify-content: space-between;
+gap: 20px;
+padding: 22px;
+background: transparent;
+border: 0;
+color: var(--branco);
+text-align: left;
+cursor: pointer;
+}
+
+.method-header h3 {
+color: var(--branco);
+font-size: 1.35rem;
+transition: color var(--transition);
+}
+
+.method-header:hover h3,
+.method-card.open .method-header h3 {
+color: var(--dourado-claro);
+}
+
+.method-header strong {
+flex-shrink: 0;
+display: flex;
+align-items: center;
+justify-content: center;
+width: 32px;
+height: 32px;
+color: var(--dourado);
+border: 1px solid var(--dourado);
+border-radius: 50%;
+font-size: 1.3rem;
+font-weight: 400;
+}
+
+.method-content {
+padding: 0 22px 25px;
+}
+
+.method-content ul {
+display: flex;
+flex-direction: column;
+gap: 10px;
+padding-left: 20px;
+}
+
+.method-content li {
+color: var(--texto-claro);
+font-size: 0.9rem;
+line-height: 1.6;
+}
+
+.method-content li::marker {
+color: var(--dourado);
+}
+
+.method-content small {
+display: block;
+margin-top: 20px;
+padding: 12px 15px;
+color: var(--dourado-claro);
+background: rgba(212, 175, 55, 0.08);
+border-left: 2px solid var(--dourado);
+line-height: 1.5;
+}
+
+/* =========================================================
+SEÇÕES EM DESTAQUE
+========================================================= */
+
+.featured-section {
+position: relative;
+}
+
+.featured-price {
+display: inline-block;
+margin-bottom: 25px;
+padding: 12px 22px;
+color: var(--dourado-claro);
+background: var(--roxo-escuro);
+border: 1px solid var(--dourado);
+border-radius: 999px;
+font-size: 1.2rem;
+font-weight: 700;
+}
+
+.period-list {
+display: flex;
+flex-wrap: wrap;
+gap: 10px;
+margin-bottom: 30px;
+}
+
+.period-list span {
+padding: 9px 16px;
+color: var(--branco);
+background: rgba(212, 175, 55, 0.1);
+border: 1px solid rgba(212, 175, 55, 0.35);
+border-radius: 999px;
+font-size: 0.85rem;
+}
+
+.info-list {
+display: flex;
+flex-direction: column;
+gap: 12px;
+padding-left: 22px;
+}
+
+.info-list li {
+color: var(--texto-claro);
+line-height: 1.7;
+}
+
+.info-list li::marker {
+color: var(--dourado);
+}
+
+/* =========================================================
+MESA REAL
+========================================================= */
+
+.mesa-real {
+margin-bottom: 55px;
+padding: 60px 45px;
+text-align: center;
+background:
+linear-gradient(
+135deg,
+rgba(155, 109, 204, 0.28),
+rgba(91, 42, 134, 0.28)
+);
+border: 1px solid var(--dourado);
+border-radius: var(--radius);
+box-shadow: var(--sombra);
+}
+
+.mesa-real > span {
+display: block;
+margin-bottom: 15px;
+color: var(--dourado);
+font-size: 0.75rem;
+font-weight: 700;
+letter-spacing: 0.15em;
+}
+
+.mesa-real h2 {
+margin-bottom: 20px;
+color: var(--branco);
+font-size: clamp(2.5rem, 5vw, 4rem);
+}
+
+.mesa-real h2 strong {
+color: var(--dourado);
+}
+
+.mesa-real .featured-price {
+margin-bottom: 25px;
+}
+
+.mesa-real p {
+max-width: 850px;
+margin: 0 auto;
+color: var(--texto-claro);
+line-height: 1.8;
+}
+
+/* =========================================================
+FIDELIDADE
+========================================================= */
+
+.fidelity {
+padding: 45px 40px;
+}
+
+.fidelity-grid {
+display: flex;
+flex-direction: column;
+gap: 25px;
+}
+
+.fidelity-main {
+width: 100%;
+}
+
+.fidelity-main p {
+color: var(--texto-claro);
+font-size: 1rem;
+line-height: 1.6;
+}
+
+.fidelity-details {
+display: flex;
+flex-direction: column;
+gap: 12px;
+padding-left: 20px;
+}
+
+.fidelity-details p {
+color: var(--texto-claro);
+font-size: 0.9rem;
+line-height: 1.6;
+}
+
+.fidelity-grid p span {
+color: var(--dourado);
+font-size: 1.2rem;
+}
+
+.fidelity-grid p strong {
+color: var(--dourado);
+font-weight: 700;
+}
+
+/* =========================================================
+INDICAÇÃO
+========================================================= */
+
+.indication-section {
+text-align: center;
+}
+
+.indication-section > span {
+display: block;
+margin-bottom: 12px;
+color: var(--dourado);
+font-size: 0.75rem;
+font-weight: 700;
+letter-spacing: 0.15em;
+}
+
+.indication-section h2 {
+margin-bottom: 18px;
+color: var(--branco);
+font-size: clamp(2rem, 4vw, 3rem);
+}
+
+.indication-section h2 strong {
+color: var(--dourado);
+}
+
+.indication-section p {
+max-width: 800px;
+margin: 0 auto;
+color: var(--texto-claro);
+line-height: 1.8;
+}
+
+.indication-section p strong {
+color: var(--dourado);
+font-weight: 700;
+}
+
+/* =========================================================
+INFORMAÇÕES IMPORTANTES
+========================================================= */
+
+.important {
+margin-bottom: 0;
+}
+
+.important-list {
+display: flex;
+flex-direction: column;
+gap: 15px;
+margin-bottom: 30px;
+}
+
+.important-list p {
+display: flex;
+gap: 12px;
+color: var(--texto-claro);
+line-height: 1.7;
+}
+
+.important-list p span {
+flex-shrink: 0;
+color: var(--dourado);
+}
+
+.important aside {
+display: flex;
+flex-direction: column;
+gap: 8px;
+padding: 22px;
+background: rgba(155, 109, 204, 0.16);
+border: 1px solid rgba(212, 175, 55, 0.45);
+border-radius: 16px;
+}
+
+.important aside strong {
+color: var(--dourado-claro);
+font-size: 1.1rem;
+}
+
+.important aside span,
+.important aside small {
+color: var(--texto-claro);
+line-height: 1.6;
+}
+
+/* =========================================================
+RESPONSIVO
+========================================================= */
+
+@media (max-width: 950px) {
+.prices {
+grid-template-columns: repeat(2, 1fr);
+}
+}
+
+@media (max-width: 700px) {
+.catalogo {
+width: min(94%, 600px);
+padding-top: 40px;
+}
+
+.catalog-section,
+.methods-section,
+.important,
+.fidelity,
+.indication-section {
+padding: 30px 22px;
+}
+
+.method-grid {
+grid-template-columns: 1fr;
+}
+
+.prices {
+grid-template-columns: 1fr;
+}
+
+.mesa-real {
+padding: 45px 25px;
+}
+}
+
+@media (max-width: 480px) {
+.page-header {
+padding-bottom: 45px;
+}
+
+.page-header h1 {
+font-size: 3rem;
+}
+
+.section-heading h2 {
+font-size: 2rem;
+}
+
+.method-header {
+padding: 18px;
+}
+
+.method-header h3 {
+font-size: 1.15rem;
+}
+
+.method-content {
+padding: 0 18px 20px;
+}
+}

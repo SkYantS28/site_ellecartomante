@@ -1,0 +1,360 @@
+.agendamento-page {
+  position: relative;
+
+  z-index: 1;
+
+  width: 100%;
+
+  padding-bottom: 80px;
+}
+
+/* =========================================================
+   CABEÇALHO
+========================================================= */
+
+.agendamento-page .page-header {
+  width: min(900px, 92%);
+
+  margin: 0 auto;
+
+  padding: 90px 0 60px;
+
+  text-align: center;
+}
+
+.agendamento-page .page-header > span {
+  display: block;
+
+  margin-bottom: 18px;
+
+  color: var(--dourado);
+
+  font-size: 0.78rem;
+
+  font-weight: 700;
+
+  letter-spacing: 0.18em;
+}
+
+.agendamento-page .page-header h1 {
+  margin-bottom: 25px;
+
+  color: var(--branco);
+
+  font-size: clamp(3rem, 7vw, 5rem);
+
+  line-height: 0.95;
+}
+
+.agendamento-page .page-header h1 strong {
+  color: var(--dourado);
+}
+
+.agendamento-page .page-header p {
+  max-width: 650px;
+
+  margin: 0 auto;
+
+  color: var(--texto-claro);
+
+  font-size: 1rem;
+
+  line-height: 1.8;
+}
+
+/* =========================================================
+   PROCESSO
+========================================================= */
+
+.booking-process {
+  width: min(1200px, 92%);
+
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 20px;
+}
+
+.process-step {
+  position: relative;
+
+  padding: 40px 30px;
+
+  background: var(--fundo-card);
+
+  border: 1px solid var(--borda-dourada);
+
+  border-radius: var(--radius);
+
+  box-shadow: var(--sombra);
+
+  backdrop-filter: blur(10px);
+
+  transition:
+    transform var(--transition),
+    border-color var(--transition);
+}
+
+.process-step:hover {
+  transform: translateY(-6px);
+
+  border-color: var(--dourado);
+}
+
+.step-number {
+  display: block;
+
+  margin-bottom: 25px;
+
+  color: var(--dourado);
+
+  font-family: "Cormorant Garamond", serif;
+
+  font-size: 2.2rem;
+
+  font-weight: 700;
+}
+
+.process-step h2 {
+  margin-bottom: 15px;
+
+  color: var(--branco);
+
+  font-size: 1.65rem;
+}
+
+.process-step p {
+  margin-bottom: 25px;
+
+  color: var(--texto-claro);
+
+  font-size: 0.9rem;
+
+  line-height: 1.75;
+}
+
+.link-button {
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  min-height: 44px;
+
+  padding: 10px 18px;
+
+  color: var(--dourado-claro);
+
+  background: transparent;
+
+  border: 1px solid var(--dourado);
+
+  border-radius: 999px;
+
+  text-decoration: none;
+
+  font-size: 0.8rem;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition:
+    background var(--transition),
+    color var(--transition),
+    transform var(--transition);
+}
+
+.link-button:hover {
+  color: var(--dourado-claro);
+
+  background: var(--lilas);
+
+  transform: translateY(-2px);
+}
+
+/* =========================================================
+   PAGAMENTO
+========================================================= */
+
+.payment-section {
+  width: min(1000px, 92%);
+
+  margin: 90px auto 0;
+
+  text-align: center;
+}
+
+.payment-section > span {
+  display: block;
+
+  margin-bottom: 15px;
+
+  color: var(--dourado);
+
+  font-size: 0.78rem;
+
+  font-weight: 700;
+
+  letter-spacing: 0.18em;
+}
+
+.payment-section > h2 {
+  margin-bottom: 35px;
+
+  color: var(--branco);
+
+  font-size: clamp(2.5rem, 5vw, 4rem);
+
+  line-height: 1;
+}
+
+.payment-section > h2 strong {
+  color: var(--dourado);
+}
+
+.payment-options {
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 20px;
+
+  text-align: left;
+}
+
+.payment-card {
+  padding: 35px 30px;
+
+  background: var(--fundo-card);
+
+  border: 1px solid var(--borda-dourada);
+
+  border-radius: var(--radius);
+
+  box-shadow: var(--sombra);
+
+  backdrop-filter: blur(10px);
+}
+
+.payment-card > strong {
+  display: block;
+
+  margin-bottom: 15px;
+
+  color: var(--dourado);
+
+  font-family: "Cormorant Garamond", serif;
+
+  font-size: 1.6rem;
+}
+
+.payment-card p {
+  color: var(--texto-claro);
+
+  font-size: 0.9rem;
+
+  line-height: 1.8;
+}
+
+.payment-card p span {
+  display: inline-block;
+
+  margin: 5px 0;
+
+  color: var(--dourado-claro);
+
+  font-weight: 600;
+}
+
+/* =========================================================
+   CTA
+========================================================= */
+
+.cta-booking {
+  width: min(900px, 92%);
+
+  margin: 70px auto 0;
+
+  padding: 55px 30px;
+
+  text-align: center;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(155, 109, 204, 0.28),
+      rgba(91, 42, 134, 0.35)
+    );
+
+  border: 1px solid var(--dourado);
+
+  border-radius: var(--radius);
+
+  box-shadow: var(--sombra);
+}
+
+.cta-booking p {
+  margin-bottom: 20px;
+
+  color: var(--texto-claro);
+
+  font-size: 1rem;
+}
+
+.cta-booking .button-primary {
+  cursor: pointer;
+}
+
+/* =========================================================
+   RESPONSIVO
+========================================================= */
+
+@media (max-width: 900px) {
+  .booking-process {
+    grid-template-columns: 1fr;
+  }
+
+  .process-step {
+    padding: 35px 30px;
+  }
+}
+
+@media (max-width: 700px) {
+  .agendamento-page .page-header {
+    padding: 60px 0 45px;
+  }
+
+  .payment-options {
+    grid-template-columns: 1fr;
+  }
+
+  .payment-section {
+    margin-top: 65px;
+  }
+
+  .cta-booking {
+    margin-top: 55px;
+  }
+}
+
+@media (max-width: 480px) {
+  .agendamento-page .page-header h1 {
+    font-size: 2.8rem;
+  }
+
+  .booking-process,
+  .payment-section,
+  .cta-booking {
+    width: 92%;
+  }
+
+  .process-step,
+  .payment-card {
+    padding: 30px 24px;
+  }
+}
