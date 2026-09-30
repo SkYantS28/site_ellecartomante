@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import "./Home.css";
 
 export default function Home() {
-  return ( 
+  return (
     <div className="home">
       <section className="hero">
         <div className="hero-content">
@@ -37,7 +37,7 @@ export default function Home() {
         <div className="hero-photo">
           <div className="photo-frame">
             <img
-              src="/images/elle.png"
+              src={`${import.meta.env.BASE_URL}images/elle.png`}
               alt="Elle - Lenormand Secrets"
               onError={(e) => {
                 e.target.style.background = "var(--roxo)";
@@ -47,13 +47,12 @@ export default function Home() {
             <div className="photo-decoration">✦</div>
           </div>
         </div>
-
       </section>
 
       <section className="about">
         <span className="section-eyebrow">
-          <span>✦ </span> 
-            LENORMAND SECRETS
+          <span>✦ </span>
+          LENORMAND SECRETS
           <span> ✦</span>
         </span>
 
@@ -69,7 +68,6 @@ export default function Home() {
           deseja investigar e encontre um espaço para olhar sua
           situação por novos ângulos.
         </p>
-
       </section>
 
       <section className="home-cards">
@@ -101,13 +99,11 @@ export default function Home() {
             jornada interior.
           </p>
         </div>
-
       </section>
 
       <section className="cta">
-
         <h2>
-          <span>✦ </span> 
+          <span>✦ </span>
           Qual questão você
           <br />
           quer investigar?
@@ -116,7 +112,6 @@ export default function Home() {
         <Link to="/catalogo">
           Conhecer o catálogo →
         </Link>
-
       </section>
     </div>
   );
