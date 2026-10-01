@@ -152,24 +152,28 @@ export default function Catalogo() {
           <div className="fidelity-main">
             <p>
               <span>✦ </span>
-              A cada 10 pontos ganhe <strong>3 perguntas</strong>
+              A cada 10 pontos ganhe <strong>3 perguntas</strong> ou <strong>20% de desconto</strong> em qualquer item do catálogo 
             </p>
           </div>
 
           <div className="fidelity-details">
             <p>
               <span>✦ </span>
-              1 ponto = <strong>1 pergunta</strong>
+              1 pergunta = <strong>1 ponto</strong>
+            </p>
+            <p>
+              <span>✦ </span>
+              Como conseguir os pontos?
             </p>
 
             <p>
               <span>✦ </span>
-              2 pontos = <strong>1 método, análise ou previsão</strong>
+              1 método, uma analise ou uma previsão: <strong>2 pontos</strong>
             </p>
 
             <p>
               <span>✦ </span>
-              3 pontos = <strong>1 consulta completa</strong>
+              1 consulta completa = <strong>3 pontos</strong>
             </p>
           </div>
         </div>
