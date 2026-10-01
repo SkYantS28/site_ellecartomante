@@ -157,13 +157,15 @@ export default function Catalogo() {
           </div>
 
           <div className="fidelity-details">
+            <h3>
+              <span>✦ </span>
+              Como conseguir os pontos?
+              <span> ✦</span>
+            </h3>
+            
             <p>
               <span>✦ </span>
               1 pergunta = <strong>1 ponto</strong>
-            </p>
-            <p>
-              <span>✦ </span>
-              Como conseguir os pontos?
             </p>
 
             <p>
