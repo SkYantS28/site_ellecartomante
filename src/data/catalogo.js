@@ -444,8 +444,8 @@ export const fidelidade = [
   "A cada 10 pontos ganhe 3 perguntas ou 20% de desconto em qualquer item do catálogo.",
   "1 pergunta = 1 ponto",
   "Como conseguir os pontos?",
-  "1 método, uma analise ou uma previsão: 2 pontos"
-  "1 consulta completa = 3 pontos"
+  "1 método, uma analise ou uma previsão: 2 pontos",
+  "1 consulta completa = 3 pontos",
 ];
 
 export const indicacao = [
