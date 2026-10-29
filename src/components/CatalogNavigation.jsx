@@ -18,10 +18,31 @@ const sections = [
 ];
 
 export default function CatalogNavigation() {
+
+  function navigateToSection(event, id) {
+    event.preventDefault();
+
+    const section = document.getElementById(id);
+
+    if (!section) {
+      console.error(`Seção não encontrada: ${id}`);
+      return;
+    }
+
+    section.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+
+    window.history.replaceState(null, "", `#${id}`);
+  }
+
   return (
     <nav className="catalog-navigation">
+
       <div className="catalog-navigation-header">
         <span>✦ EXPLORE O CATÁLOGO</span>
+
         <p>
           Encontre diretamente o tipo de atendimento
           que procura.
@@ -29,16 +50,22 @@ export default function CatalogNavigation() {
       </div>
 
       <div className="catalog-navigation-links">
+
         {sections.map((section) => (
           <a
             key={section.id}
             href={`#${section.id}`}
+            onClick={(event) =>
+              navigateToSection(event, section.id)
+            }
           >
             {section.label}
             <span>✦</span>
           </a>
         ))}
+
       </div>
+
     </nav>
   );
 }
