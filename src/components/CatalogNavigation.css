@@ -14,6 +14,7 @@
 
   border: 1px solid rgba(212, 175, 55, 0.35);
   border-radius: 18px;
+
   box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
 }
 
@@ -74,10 +75,13 @@
   color: #281832;
 }
 
-html {
-  scroll-behavior: smooth;
-  scroll-padding-top: 35px;
+/* Rolagem até as seções */
+
+.catalogo section[id] {
+  scroll-margin-top: 30px;
 }
+
+/* Responsividade */
 
 @media (max-width: 600px) {
   .catalog-navigation {
