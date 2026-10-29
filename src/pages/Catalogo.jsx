@@ -1,3 +1,4 @@
+
 import {
   perguntas,
   consultasCompletas,
@@ -15,6 +16,7 @@ import {
   taxaEmergencial,
 } from "../data/catalogo";
 
+import CatalogNavigation from "../components/CatalogNavigation";
 import MethodCard from "../components/MethodCard";
 
 import "./Catalogo.css";
@@ -48,9 +50,9 @@ function SectionTitle({ eyebrow, title, highlight }) {
   );
 }
 
-function MethodSection({ title, data }) {
+function MethodSection({ title, data, id }) {
   return (
-    <section className="methods-section">
+    <section className="methods-section" id={id}>
       <SectionTitle title={title} />
 
       <div className="method-price-highlight">
@@ -102,8 +104,14 @@ export default function Catalogo() {
         </p>
       </section>
 
-     {/* POLÍTICA DE ATENDIMENTO */}
-      <section className="important">
+      {/* NAVEGAÇÃO DO CATÁLOGO */}
+
+      <CatalogNavigation />
+
+
+      {/* POLÍTICA DE ATENDIMENTO */}
+
+      <section className="important" id="politica">
         <SectionTitle
           eyebrow="POLÍTICA DE ATENDIMENTO"
           title="Informações"
@@ -134,14 +142,10 @@ export default function Catalogo() {
         </aside>
       </section>
 
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
 
       {/* PROGRAMA DE FIDELIDADE */}
-      <section className="fidelity">
+
+      <section className="fidelity" id="fidelidade">
         <SectionTitle
           eyebrow="PROGRAMA DE FIDELIDADE"
           title="Acumule"
@@ -152,7 +156,9 @@ export default function Catalogo() {
           <div className="fidelity-main">
             <p>
               <span>✦ </span>
-              A cada 10 pontos ganhe <strong>3 perguntas</strong> ou <strong>20% de desconto</strong> em qualquer item do catálogo 
+              A cada 10 pontos ganhe{" "}
+              <strong>3 perguntas</strong> ou{" "}
+              <strong>20% de desconto</strong> em qualquer item do catálogo.
             </p>
           </div>
 
@@ -162,7 +168,7 @@ export default function Catalogo() {
               Como conseguir os pontos?
               <span> ✦</span>
             </h3>
-            
+
             <p>
               <span>✦ </span>
               1 pergunta = <strong>1 ponto</strong>
@@ -170,7 +176,8 @@ export default function Catalogo() {
 
             <p>
               <span>✦ </span>
-              1 método, uma analise ou uma previsão: <strong>2 pontos</strong>
+              1 método, uma análise ou uma previsão:{" "}
+              <strong>2 pontos</strong>
             </p>
 
             <p>
@@ -181,8 +188,10 @@ export default function Catalogo() {
         </div>
       </section>
 
+
       {/* INDIQUE E GANHE */}
-      <section className="indication-section">
+
+      <section className="indication-section" id="indicacao">
         <span>✦ INDIQUE E GANHE</span>
 
         <h2>
@@ -191,16 +200,24 @@ export default function Catalogo() {
         </h2>
 
         <p>
-          <span>✦ </span> Indique para seus amigos!
+          <span>✦ </span>
+          Indique para seus amigos!
         </p>
-        <br></br>
+
+        <br />
+
         <p>
-          <span>✦ </span> Cada pessoa indicada por você que realizar uma consulta te garante <strong>1 pergunta gratuita</strong> ou <strong>20% de desconto</strong> em algum método ou análise.
+          <span>✦ </span>
+          Cada pessoa indicada por você que realizar uma consulta
+          te garante <strong>1 pergunta gratuita</strong> ou{" "}
+          <strong>20% de desconto</strong> em algum método ou análise.
         </p>
       </section>
 
+
       {/* PERGUNTAS */}
-      <section className="catalog-section">
+
+      <section className="catalog-section" id="perguntas">
         <SectionTitle
           eyebrow="PERGUNTAS"
           title="Perguntas ao"
@@ -221,8 +238,10 @@ export default function Catalogo() {
         </div>
       </section>
 
+
       {/* CONSULTAS COMPLETAS */}
-      <section className="catalog-section">
+
+      <section className="catalog-section" id="consultas">
         <SectionTitle
           eyebrow="CONSULTAS COMPLETAS"
           title="Consultas"
@@ -245,27 +264,38 @@ export default function Catalogo() {
 
 
       {/* MÉTODOS AMOROSOS */}
+
       <MethodSection
+        id="metodos-amorosos"
         title="Métodos amorosos"
         data={metodosAmorosos}
       />
 
+
       {/* MÉTODOS GERAIS */}
+
       <MethodSection
+        id="metodos-gerais"
         title="Métodos gerais"
         data={metodosGerais}
       />
 
 
       {/* ANÁLISES COMPLETAS */}
+
       <MethodSection
+        id="analises"
         title="Análises completas"
         data={analisesCompletas}
       />
 
+
       {/* PREVISÃO */}
 
-      <section className="catalog-section featured-section">
+      <section
+        className="catalog-section featured-section"
+        id="previsao"
+      >
         <SectionTitle
           eyebrow="PREVISÃO"
           title="Previsão"
@@ -296,7 +326,11 @@ export default function Catalogo() {
 
 
       {/* ANÁLISE GERAL */}
-      <section className="catalog-section featured-section">
+
+      <section
+        className="catalog-section featured-section"
+        id="analise-geral"
+      >
         <SectionTitle
           eyebrow="ANÁLISE"
           title="Análise"
@@ -320,7 +354,11 @@ export default function Catalogo() {
 
 
       {/* ELO ESPIRITUAL */}
-      <section className="catalog-section featured-section">
+
+      <section
+        className="catalog-section featured-section"
+        id="espiritualidade"
+      >
         <SectionTitle
           eyebrow="ESPIRITUALIDADE"
           title="Elo"
@@ -338,8 +376,10 @@ export default function Catalogo() {
         </ul>
       </section>
 
+
       {/* VISLUMBRE ASTRAL */}
-      <section className="catalog-section">
+
+      <section className="catalog-section" id="vislumbre">
         <SectionTitle
           eyebrow="ORÁCULO VISLUMBRE ASTRAL"
           title="Vislumbre"
@@ -366,7 +406,8 @@ export default function Catalogo() {
 
 
       {/* MESA REAL */}
-      <section className="mesa-real">
+
+      <section className="mesa-real" id="mesa-real">
         <span>✦ LEITURA ESPECIAL</span>
 
         <h2>
