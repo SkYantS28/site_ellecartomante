@@ -142,7 +142,8 @@ export default function Catalogo() {
         </aside>
       </section>
 
-
+      <br></br>
+      <br></br>
       {/* PROGRAMA DE FIDELIDADE */}
 
       <section className="fidelity" id="fidelidade">
