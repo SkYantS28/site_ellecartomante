@@ -1,3 +1,4 @@
+
 import { HashRouter, Routes, Route } from "react-router-dom";
 
 import Header from "./components/Header";
@@ -8,6 +9,7 @@ import Home from "./pages/Home";
 import Catalogo from "./pages/Catalogo";
 import Cursos from "./pages/Cursos";
 import Agendamento from "./pages/Agendamento";
+import Feedbacks from "./pages/Feedbacks";
 
 export default function App() {
   return (
@@ -21,6 +23,7 @@ export default function App() {
           <Route path="/" element={<Home />} />
           <Route path="/catalogo" element={<Catalogo />} />
           <Route path="/cursos" element={<Cursos />} />
+          <Route path="/feedbacks" element={<Feedbacks />} />
           <Route path="/agendamento" element={<Agendamento />} />
         </Routes>
       </main>
