@@ -468,3 +468,88 @@ export const taxaEmergencial = {
   aviso:
     "Atenção: só efetue o pagamento da taxa emergencial após minha confirmação.",
 };
+
+
+export const mapa2027 = {
+  nome: "Mapa 2027",
+  descricao: "Seu ano revelado pelo Baralho Cigano.",
+
+  promocao: {
+    desconto: 20,
+    validade: "15 de novembro",
+  },
+
+  precos: [
+    {
+      nome: "Completo — 5 áreas da vida",
+      original: 348,
+      promocional: 278.40,
+    },
+    {
+      nome: "Compacto — escolha 2 áreas da vida",
+      original: 288,
+      promocional: 230.40,
+    },
+  ],
+
+  visaoGeral: [
+    "Energia geral de 2027",
+    "Principal desafio do ano",
+    "No que focar esse ano?",
+    "Maior conquista ou ponto alto",
+  ],
+
+  portais: [
+    "Janeiro",
+    "Fevereiro",
+    "Março",
+    "Abril",
+    "Maio",
+    "Junho",
+    "Julho",
+    "Agosto",
+    "Setembro",
+    "Outubro",
+    "Novembro",
+    "Dezembro",
+  ],
+
+  areas: [
+    {
+      nome: "Vida pessoal",
+      itens: [
+        "Como estará a saúde emocional?",
+        "Qual mudança pessoal esse ano pede?",
+      ],
+    },
+    {
+      nome: "Vida amorosa",
+      itens: [
+        "Como estará a vida amorosa?",
+        "Qual lição afetiva o ano traz?",
+      ],
+    },
+    {
+      nome: "Vida profissional",
+      itens: [
+        "Como estará a vida profissional?",
+        "Qual a principal conquista ou ponto de atenção?",
+      ],
+    },
+    {
+      nome: "Vida financeira",
+      itens: [
+        "Como será o fluxo financeiro?",
+        "Qual a principal conquista ou ponto de atenção?",
+      ],
+    },
+    {
+      nome: "Vida espiritual",
+      itens: [
+        "Qual principal aprendizado ou despertar espiritual vem nesse ciclo?",
+        "Como estará a relação com a espiritualidade?",
+      ],
+    },
+  ],
+};
+
