@@ -1,4 +1,3 @@
-
 import {
   perguntas,
   consultasCompletas,
@@ -14,6 +13,7 @@ import {
   indicacao,
   politica,
   taxaEmergencial,
+  mapa2027,
 } from "../data/catalogo";
 
 import CatalogNavigation from "../components/CatalogNavigation";
@@ -144,6 +144,7 @@ export default function Catalogo() {
 
       <br></br>
       <br></br>
+
       {/* PROGRAMA DE FIDELIDADE */}
 
       <section className="fidelity" id="fidelidade">
@@ -213,6 +214,140 @@ export default function Catalogo() {
           te garante <strong>1 pergunta gratuita</strong> ou{" "}
           <strong>20% de desconto</strong> em algum método ou análise.
         </p>
+      </section>
+
+
+      {/* MAPA 2027 */}
+
+      <section
+        className="catalog-section featured-section"
+        id="mapa-2027"
+      >
+        <SectionTitle
+          eyebrow="EDIÇÃO ESPECIAL • 2027"
+          title="Mapa"
+          highlight="2027"
+        />
+
+        <p className="section-description">
+          {mapa2027.descricao}
+        </p>
+
+        <div className="mapa2027-promotion">
+          <span>✦ PROMOÇÃO DE LANÇAMENTO ✦</span>
+
+          <h3>
+            {mapa2027.promocao.desconto}% de desconto
+          </h3>
+
+          <p>
+            Oferta válida até dia {mapa2027.promocao.validade}.
+          </p>
+
+          <small>
+            Parcelamento em até 12x no cartão de crédito.
+          </small>
+        </div>
+
+        <div className="prices">
+          {mapa2027.precos.map((item) => (
+            <div
+              className="price-card mapa2027-price-card"
+              key={item.nome}
+            >
+              <span>{item.nome}</span>
+
+              <del>
+                {formatPrice(item.original)}
+              </del>
+
+              <strong>
+                {formatPrice(item.promocional)}
+              </strong>
+
+              <small>
+                Preço promocional
+              </small>
+            </div>
+          ))}
+        </div>
+
+        <div className="mapa2027-content">
+
+          {/* VISÃO GERAL */}
+
+          <div className="mapa2027-block">
+            <SectionTitle
+              eyebrow="PRIMEIRA ETAPA"
+              title="Visão"
+              highlight="geral"
+            />
+
+            <ul className="info-list">
+              {mapa2027.visaoGeral.map((item) => (
+                <li key={item}>
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </div>
+
+
+          {/* OS 12 PORTAIS */}
+
+          <div className="mapa2027-block">
+            <SectionTitle
+              eyebrow="PREVISÕES MENSAIS"
+              title="Os 12"
+              highlight="portais"
+            />
+
+            <p className="section-description">
+              Energia que irá reger cada mês de 2027.
+            </p>
+
+            <div className="mapa2027-months">
+              {mapa2027.portais.map((mes, index) => (
+                <div
+                  className="mapa2027-month"
+                  key={mes}
+                >
+                  <span>
+                    {String(index + 1).padStart(2, "0")}
+                  </span>
+
+                  <strong>
+                    {mes}
+                  </strong>
+                </div>
+              ))}
+            </div>
+          </div>
+
+
+          {/* ÁREAS DA VIDA */}
+
+          <div className="mapa2027-block">
+            <SectionTitle
+              eyebrow="ANÁLISE COMPLETA"
+              title="Áreas da"
+              highlight="vida"
+            />
+
+            <div className="method-grid">
+              {mapa2027.areas.map((area) => (
+                <MethodCard
+                  key={area.nome}
+                  method={{
+                    nome: area.nome,
+                    itens: area.itens,
+                  }}
+                />
+              ))}
+            </div>
+          </div>
+
+        </div>
       </section>
 
 
