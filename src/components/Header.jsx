@@ -1,3 +1,4 @@
+
 import { Link, useLocation } from "react-router-dom";
 import "./Header.css";
 
@@ -35,6 +36,13 @@ export default function Header() {
             className={isActive("/cursos") ? "active" : ""}
           >
             Meus cursos
+          </Link>
+
+          <Link
+            to="/feedbacks"
+            className={isActive("/feedbacks") ? "active" : ""}
+          >
+            Feedbacks
           </Link>
         </nav>
 
