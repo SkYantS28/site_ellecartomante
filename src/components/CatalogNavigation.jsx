@@ -5,6 +5,7 @@ const sections = [
   { id: "politica", label: "Informações" },
   { id: "fidelidade", label: "Fidelidade" },
   { id: "indicacao", label: "Indique e ganhe" },
+  { id: "mapa-2027", label: "Mapa 2027" },
   { id: "perguntas", label: "Perguntas" },
   { id: "consultas", label: "Consultas completas" },
   { id: "metodos-amorosos", label: "Métodos amorosos" },
