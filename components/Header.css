@@ -1,0 +1,218 @@
+.header {
+  position: relative;
+
+  z-index: 10;
+
+  width: 100%;
+
+  background: rgba(22, 9, 34, 0.92);
+
+  border-bottom: 1px solid var(--borda-dourada);
+
+  backdrop-filter: blur(12px);
+}
+
+.header-container {
+  width: min(1200px, 92%);
+
+  margin: 0 auto;
+
+  min-height: 82px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 30px;
+}
+
+/* =========================================================
+   LOGO
+========================================================= */
+
+.logo {
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  color: var(--dourado);
+
+  text-decoration: none;
+
+  font-family: "Cormorant Garamond", serif;
+
+  font-size: 1.65rem;
+
+  font-weight: 700;
+
+  white-space: nowrap;
+}
+
+.logo-star {
+  color: var(--dourado-claro);
+
+  font-size: 1.5rem;
+}
+
+/* =========================================================
+   NAVEGAÇÃO
+========================================================= */
+
+nav {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 28px;
+}
+
+nav a {
+  position: relative;
+
+  color: var(--branco);
+
+  text-decoration: none;
+
+  font-size: 0.9rem;
+
+  font-weight: 500;
+
+  padding: 8px 0;
+
+  transition: color var(--transition);
+}
+
+nav a::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+
+  bottom: 0;
+
+  width: 0;
+
+  height: 2px;
+
+  background: var(--dourado);
+
+  transition: width var(--transition);
+}
+
+nav a:hover,
+nav a.active {
+  color: var(--dourado-claro);
+}
+
+nav a:hover::after,
+nav a.active::after {
+  width: 100%;
+}
+
+/* =========================================================
+   BOTÃO
+========================================================= */
+
+.header-button {
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  min-width: 120px;
+
+  padding: 12px 20px;
+
+  background: var(--lilas);
+
+  color: var(--branco);
+
+  border: 1px solid var(--dourado);
+
+  border-radius: 999px;
+
+  text-decoration: none;
+
+  font-size: 0.85rem;
+
+  font-weight: 700;
+
+  transition:
+    background var(--transition),
+    transform var(--transition),
+    box-shadow var(--transition);
+}
+
+.header-button:hover {
+  background: var(--lilas-claro);
+
+  transform: translateY(-2px);
+
+  box-shadow: 0 6px 20px rgba(212, 175, 55, 0.2);
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 850px) {
+  .header-container {
+    flex-wrap: wrap;
+
+    justify-content: center;
+
+    padding: 18px 0;
+  }
+
+  .logo {
+    width: 100%;
+
+    justify-content: center;
+  }
+
+  nav {
+    order: 2;
+
+    gap: 20px;
+
+    flex-wrap: wrap;
+  }
+
+  .header-button {
+    order: 3;
+  }
+}
+
+/* =========================================================
+   CELULAR
+========================================================= */
+
+@media (max-width: 520px) {
+  .header-container {
+    gap: 18px;
+  }
+
+  nav {
+    gap: 14px;
+  }
+
+  nav a {
+    font-size: 0.82rem;
+  }
+
+  .logo {
+    font-size: 1.45rem;
+  }
+
+  .header-button {
+    width: 100%;
+  }
+}

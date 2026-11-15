@@ -1,0 +1,72 @@
+
+import "./CatalogNavigation.css";
+
+const sections = [
+  { id: "politica", label: "Informações" },
+  { id: "fidelidade", label: "Fidelidade" },
+  { id: "indicacao", label: "Indique e ganhe" },
+  { id: "mapa-2027", label: "Mapa 2027" },
+  { id: "perguntas", label: "Perguntas" },
+  { id: "consultas", label: "Consultas completas" },
+  { id: "metodos-amorosos", label: "Métodos amorosos" },
+  { id: "metodos-gerais", label: "Métodos gerais" },
+  { id: "analises", label: "Análises completas" },
+  { id: "previsao", label: "Previsão" },
+  { id: "analise-geral", label: "Análise geral" },
+  { id: "espiritualidade", label: "Elo espiritual" },
+  { id: "vislumbre", label: "Vislumbre Astral" },
+  { id: "mesa-real", label: "Mesa Real" },
+];
+
+export default function CatalogNavigation() {
+
+  function navigateToSection(event, id) {
+    event.preventDefault();
+
+    const section = document.getElementById(id);
+
+    if (!section) {
+      console.error(`Seção não encontrada: ${id}`);
+      return;
+    }
+
+    section.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+
+    window.history.replaceState(null, "", `#${id}`);
+  }
+
+  return (
+    <nav className="catalog-navigation">
+
+      <div className="catalog-navigation-header">
+        <span>✦ EXPLORE O CATÁLOGO</span>
+
+        <p>
+          Encontre diretamente o tipo de atendimento
+          que procura.
+        </p>
+      </div>
+
+      <div className="catalog-navigation-links">
+
+        {sections.map((section) => (
+          <a
+            key={section.id}
+            href={`#${section.id}`}
+            onClick={(event) =>
+              navigateToSection(event, section.id)
+            }
+          >
+            {section.label}
+            <span>✦</span>
+          </a>
+        ))}
+
+      </div>
+
+    </nav>
+  );
+}

@@ -1,0 +1,174 @@
+.snake-background {
+  position: fixed;
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  overflow: hidden;
+  pointer-events: none;
+
+  z-index: 0;
+}
+
+/* =========================================================
+   CONFIGURAÇÃO GERAL
+========================================================= */
+
+.snake {
+  position: absolute;
+
+  width: 150px;
+  height: auto;
+
+  opacity: 0.10;
+
+  object-fit: contain;
+
+  filter:
+    brightness(1.15)
+    contrast(1.05)
+    drop-shadow(0 0 6px rgba(212, 175, 55, 0.15));
+}
+
+/* =========================================================
+   COBRA 1 — CANTO SUPERIOR ESQUERDO
+========================================================= */
+
+.snake-1 {
+  width: 190px;
+
+  left: -35px;
+  top: 7%;
+
+  transform: rotate(-8deg);
+}
+
+/* =========================================================
+   COBRA 2 — CANTO SUPERIOR DIREITO
+========================================================= */
+
+.snake-2 {
+  width: 190px;
+
+  right: -35px;
+  top: 25%;
+
+  transform: rotate(8deg);
+}
+
+/* =========================================================
+   COBRA 3 — LADO ESQUERDO
+========================================================= */
+
+.snake-3 {
+  width: 170px;
+
+  left: -30px;
+  top: 55%;
+
+  transform: rotate(7deg);
+}
+
+/* =========================================================
+   COBRA 4 — LADO DIREITO
+========================================================= */
+
+.snake-4 {
+  width: 190px;
+
+  right: -35px;
+  top: 78%;
+
+  transform: rotate(-8deg);
+}
+
+/* =========================================================
+   COBRA 5 — CENTRO SUPERIOR
+========================================================= */
+
+.snake-5 {
+  width: 120px;
+
+  left: 38%;
+  top: 12%;
+
+  opacity: 0.07;
+
+  transform: rotate(15deg);
+}
+
+/* =========================================================
+   COBRA 6 — CENTRO INFERIOR
+========================================================= */
+
+.snake-6 {
+  width: 130px;
+
+  right: 35%;
+  bottom: 8%;
+
+  opacity: 0.07;
+
+  transform: rotate(-15deg);
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+  .snake-1,
+  .snake-2,
+  .snake-3,
+  .snake-4 {
+    width: 135px;
+  }
+
+  .snake-5,
+  .snake-6 {
+    display: none;
+  }
+}
+
+/* =========================================================
+   CELULAR
+========================================================= */
+
+@media (max-width: 600px) {
+  .snake {
+    opacity: 0.07;
+  }
+
+  .snake-1,
+  .snake-2,
+  .snake-3,
+  .snake-4 {
+    width: 105px;
+  }
+
+  .snake-5,
+  .snake-6 {
+    display: none;
+  }
+
+  .snake-1 {
+    left: -35px;
+    top: 10%;
+  }
+
+  .snake-2 {
+    right: -35px;
+    top: 35%;
+  }
+
+  .snake-3 {
+    left: -35px;
+    top: 60%;
+  }
+
+  .snake-4 {
+    right: -35px;
+    top: 82%;
+  }
+}

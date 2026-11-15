@@ -1,0 +1,382 @@
+
+/* =========================================
+   PÁGINA DE FEEDBACKS
+========================================= */
+
+.feedbacks-page {
+  width: 100%;
+  min-height: 80vh;
+  padding-bottom: 100px;
+  overflow: hidden;
+}
+
+/* =========================================
+   CABEÇALHO
+========================================= */
+
+.feedbacks-header {
+  padding: 110px 24px 80px;
+  text-align: center;
+  background:
+    radial-gradient(
+      ellipse at top,
+      rgba(157, 113, 190, 0.15),
+      transparent 70%
+    );
+}
+
+.feedbacks-subtitle {
+  display: block;
+  margin-bottom: 20px;
+  color: var(--dourado);
+  font-size: 0.85rem;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+}
+
+.feedbacks-header h1 {
+  margin-bottom: 24px;
+  color: var(--dourado-claro);
+  font-size: clamp(3rem, 7vw, 5.5rem);
+  font-weight: 500;
+}
+
+.feedbacks-header p {
+  max-width: 650px;
+  margin: 0 auto;
+  color: var(--texto);
+  font-size: 0.95rem;
+  line-height: 1.9;
+}
+
+/* =========================================
+   TÍTULOS DAS SEÇÕES
+========================================= */
+
+.feedbacks-section-title {
+  margin-bottom: 45px;
+  text-align: center;
+}
+
+.feedbacks-section-title > span {
+  display: block;
+  margin-bottom: 12px;
+  color: var(--dourado);
+  font-size: 0.8rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+.feedbacks-section-title h2 {
+  margin-bottom: 16px;
+  color: var(--dourado-claro);
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  font-weight: 500;
+}
+
+.feedbacks-section-title p {
+  color: var(--texto);
+  font-size: 0.9rem;
+  line-height: 1.8;
+}
+
+/* =========================================
+   VÍDEO
+========================================= */
+
+.feedbacks-video-section {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 30px 24px 100px;
+}
+
+.feedbacks-video-container {
+  position: relative;
+  width: 100%;
+  max-width: 750px;
+  margin: 0 auto;
+  overflow: hidden;
+  border: 1px solid rgba(212, 175, 55, 0.4);
+  border-radius: 16px;
+  background: var(--roxo-escuro);
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.3);
+}
+
+.feedbacks-video-container video {
+  display: block;
+  width: 100%;
+  max-height: 650px;
+  object-fit: contain;
+}
+
+/* =========================================
+   GALERIA
+========================================= */
+
+.feedbacks-gallery-section {
+  max-width: 1450px;
+  margin: 0 auto;
+  padding: 30px 30px 80px;
+}
+
+.feedbacks-gallery {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 24px;
+}
+
+/* =========================================
+   CARDS
+========================================= */
+
+.feedbacks-card {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 0;
+  overflow: hidden;
+  border: 1px solid rgba(212, 175, 55, 0.25);
+  border-radius: 12px;
+  background: var(--roxo-escuro);
+  cursor: pointer;
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.feedbacks-card img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: transform 0.4s ease;
+}
+
+.feedbacks-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--dourado);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+}
+
+.feedbacks-card:hover img {
+  transform: scale(1.03);
+}
+
+/* =========================================
+   SOBREPOSIÇÃO DOS CARDS
+========================================= */
+
+.feedbacks-card-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  background: rgba(30, 10, 45, 0.65);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.feedbacks-card:hover .feedbacks-card-overlay {
+  opacity: 1;
+}
+
+/* =========================================
+   MODAL / IMAGEM AMPLIADA
+========================================= */
+
+.feedbacks-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+  padding: 50px 80px;
+  background: rgba(12, 5, 20, 0.95);
+  backdrop-filter: blur(8px);
+}
+
+.feedbacks-modal-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 90%;
+  max-height: 90%;
+  gap: 15px;
+}
+
+.feedbacks-modal-content img {
+  display: block;
+  max-width: 100%;
+  max-height: calc(90vh - 60px);
+  object-fit: contain;
+  border: 1px solid rgba(212, 175, 55, 0.4);
+  border-radius: 10px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+}
+
+.feedbacks-modal-content span {
+  color: var(--dourado-claro);
+  font-size: 0.85rem;
+  letter-spacing: 2px;
+}
+
+/* =========================================
+   BOTÃO FECHAR
+========================================= */
+
+.feedbacks-modal-close {
+  position: absolute;
+  top: 25px;
+  right: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+  height: 45px;
+  border: 1px solid rgba(212, 175, 55, 0.4);
+  border-radius: 50%;
+  color: var(--dourado-claro);
+  font-size: 2rem;
+  background: rgba(80, 40, 100, 0.3);
+  transition:
+    background 0.3s ease,
+    transform 0.3s ease;
+}
+
+.feedbacks-modal-close:hover {
+  background: rgba(212, 175, 55, 0.15);
+  transform: rotate(90deg);
+}
+
+/* =========================================
+   NAVEGAÇÃO DO MODAL
+========================================= */
+
+.feedbacks-modal-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 50px;
+  height: 50px;
+  border: 1px solid rgba(212, 175, 55, 0.4);
+  border-radius: 50%;
+  color: var(--dourado-claro);
+  font-size: 2.5rem;
+  background: rgba(80, 40, 100, 0.3);
+  transition:
+    background 0.3s ease,
+    border-color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.feedbacks-modal-nav:hover {
+  border-color: var(--dourado);
+  background: rgba(212, 175, 55, 0.15);
+  transform: scale(1.08);
+}
+
+/* =========================================
+   RESPONSIVIDADE
+========================================= */
+
+@media (max-width: 1100px) {
+  .feedbacks-gallery {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .feedbacks-header {
+    padding: 85px 20px 60px;
+  }
+
+  .feedbacks-header p {
+    font-size: 0.85rem;
+  }
+
+  .feedbacks-video-section {
+    padding: 20px 18px 70px;
+  }
+
+  .feedbacks-gallery-section {
+    padding: 20px 18px 60px;
+  }
+
+  .feedbacks-gallery {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+  }
+
+  .feedbacks-section-title {
+    margin-bottom: 30px;
+  }
+
+  .feedbacks-modal {
+    gap: 10px;
+    padding: 60px 12px 30px;
+  }
+
+  .feedbacks-modal-nav {
+    width: 38px;
+    height: 38px;
+    font-size: 1.8rem;
+  }
+
+  .feedbacks-modal-content {
+    max-width: calc(100% - 95px);
+  }
+
+  .feedbacks-modal-content img {
+    max-height: 75vh;
+  }
+
+  .feedbacks-modal-close {
+    top: 15px;
+    right: 15px;
+    width: 38px;
+    height: 38px;
+    font-size: 1.7rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .feedbacks-gallery {
+    gap: 10px;
+  }
+
+  .feedbacks-card {
+    border-radius: 8px;
+  }
+
+  .feedbacks-subtitle {
+    font-size: 0.7rem;
+    letter-spacing: 2px;
+  }
+
+  .feedbacks-modal {
+    gap: 5px;
+    padding-inline: 5px;
+  }
+
+  .feedbacks-modal-nav {
+    width: 32px;
+    height: 32px;
+    font-size: 1.5rem;
+  }
+
+  .feedbacks-modal-content {
+    max-width: calc(100% - 75px);
+  }
+}

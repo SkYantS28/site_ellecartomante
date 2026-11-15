@@ -1,0 +1,223 @@
+.footer {
+  position: relative;
+
+  z-index: 1;
+
+  margin-top: 80px;
+
+  background: var(--roxo-escuro);
+
+  border-top: 1px solid var(--borda-dourada);
+}
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.footer-container {
+  width: min(1200px, 92%);
+
+  margin: 0 auto;
+
+  padding: 60px 0 45px;
+
+  display: grid;
+
+  grid-template-columns: 1.5fr 1fr 1fr;
+
+  gap: 60px;
+}
+
+/* =========================================================
+   MARCA
+========================================================= */
+
+.footer-brand {
+  max-width: 400px;
+}
+
+.footer-logo {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  margin-bottom: 18px;
+
+  color: var(--dourado);
+
+  text-decoration: none;
+
+  font-family: "Cormorant Garamond", serif;
+
+  font-size: 1.8rem;
+
+  font-weight: 700;
+}
+
+.footer-logo span:first-child {
+  color: var(--dourado-claro);
+
+  font-size: 1.5rem;
+}
+
+.footer-brand p {
+  color: var(--texto-claro);
+
+  font-size: 0.9rem;
+
+  line-height: 1.8;
+}
+
+/* =========================================================
+   COLUNAS
+========================================================= */
+
+.footer-column {
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: flex-start;
+
+  gap: 12px;
+}
+
+.footer-column h2 {
+  margin-bottom: 8px;
+
+  color: var(--branco);
+
+  font-size: 1.3rem;
+}
+
+.footer-column h2::after {
+  content: "";
+
+  display: block;
+
+  width: 35px;
+
+  height: 2px;
+
+  margin-top: 7px;
+
+  background: var(--dourado);
+}
+
+.footer-column a {
+  color: var(--texto-claro);
+
+  text-decoration: none;
+
+  font-size: 0.85rem;
+
+  transition:
+    color var(--transition),
+    transform var(--transition);
+}
+
+.footer-column a:hover {
+  color: var(--dourado-claro);
+
+  transform: translateX(4px);
+}
+
+/* =========================================================
+   PARTE INFERIOR
+========================================================= */
+
+.footer-bottom {
+  width: min(1200px, 92%);
+
+  margin: 0 auto;
+
+  padding: 25px 0;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 20px;
+
+  border-top: 1px solid rgba(212, 175, 55, 0.18);
+}
+
+.footer-bottom p {
+  color: rgba(255, 255, 255, 0.55);
+
+  font-size: 0.72rem;
+
+  line-height: 1.5;
+}
+
+.footer-bottom span {
+  color: var(--dourado);
+
+  font-family: "Cormorant Garamond", serif;
+
+  font-size: 1rem;
+
+  font-weight: 600;
+
+  white-space: nowrap;
+}
+
+/* =========================================================
+   RESPONSIVO
+========================================================= */
+
+@media (max-width: 800px) {
+  .footer-container {
+    grid-template-columns: 1fr 1fr;
+
+    gap: 45px;
+  }
+
+  .footer-brand {
+    grid-column: 1 / -1;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+
+    text-align: center;
+  }
+}
+
+@media (max-width: 520px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+
+    gap: 35px;
+
+    padding: 45px 0 35px;
+  }
+
+  .footer-brand {
+    grid-column: auto;
+  }
+
+  .footer-column {
+    align-items: center;
+
+    text-align: center;
+  }
+
+  .footer-column h2::after {
+    margin-left: auto;
+
+    margin-right: auto;
+  }
+
+  .footer-bottom {
+    padding: 22px 0;
+  }
+
+  .footer-bottom p {
+    font-size: 0.68rem;
+  }
+}
