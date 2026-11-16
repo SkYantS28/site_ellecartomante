@@ -47,17 +47,11 @@ behavior: "smooth",
             Meus cursos
           </Link>
 
-          <Link
-            to="/mentoria"
-            className={isActive("/mentoria") ? "active" : ""}
-          >
+          <Link to="/mentoria" onClick={handleNavigation}>
             Mentoria
           </Link>
 
-          <Link
-            to="/feedbacks"
-            className={isActive("/feedbacks") ? "active" : ""}
-          >
+          <Link to="/feedbacks" onClick={handleNavigation}>
             Feedbacks
           </Link>
 
