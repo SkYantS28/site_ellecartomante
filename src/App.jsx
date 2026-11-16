@@ -8,6 +8,7 @@ import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import Catalogo from "./pages/Catalogo";
 import Cursos from "./pages/Cursos";
+import Mentoria from "./pages/Mentoria";
 import Agendamento from "./pages/Agendamento";
 import Feedbacks from "./pages/Feedbacks";
 
@@ -23,6 +24,7 @@ export default function App() {
           <Route path="/" element={<Home />} />
           <Route path="/catalogo" element={<Catalogo />} />
           <Route path="/cursos" element={<Cursos />} />
+          <Route path="/mentoria" element={<Mentoria />} />
           <Route path="/feedbacks" element={<Feedbacks />} />
           <Route path="/agendamento" element={<Agendamento />} />
         </Routes>

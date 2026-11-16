@@ -39,6 +39,13 @@ export default function Header() {
           </Link>
 
           <Link
+            to="/mentoria"
+            className={isActive("/mentoria") ? "active" : ""}
+          >
+            Mentoria
+          </Link>
+
+          <Link
             to="/feedbacks"
             className={isActive("/feedbacks") ? "active" : ""}
           >
